@@ -1,0 +1,13 @@
+version: "2.0"
+
+services:
+    centos:
+        image: qq-bot
+        container_name: qq-bot
+        restart: always
+        command: 
+            - sh
+            - -c
+            - |
+                cd /root/cq-picsearcher-bot && npm run start &    
+                ./go-cqhttp 
