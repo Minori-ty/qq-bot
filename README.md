@@ -5,7 +5,7 @@
 - 添加config.yml中的qq号和密码
 - 输入命令行，docker build -t qq-bot . （后面有一点的，别漏了）
 - 输入命令行，docker-compose up
-- 立马输入docker attach qq-bot
+- 如果需要扫二维码，并且没有出现二维码，则重新重复以上步骤，并且在生成镜像的时候立马开新的终端，输入docker attach qq-bot，进行扫码
 ***
 看了文档还是看不懂？
 我在b站录制了视频辅助大家部署搭建——
