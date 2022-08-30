@@ -1,0 +1,17 @@
+FROM centos
+
+WORKDIR /WWW/WWWROOT/
+
+# 下载go-cqhttp
+ADD https://github.com/Mrs4s/go-cqhttp/releases/download/v1.0.0-rc3/go-cqhttp_linux_amd64.tar.gz /WWW/WWWROOT/
+
+# 解压压缩包
+RUN tar -xzvf go-cqhttp_linux_amd64.tar.gz
+
+# 拷贝配置到centos镜像中
+COPY ./config.yml /WWW/WWWROOT/
+
+EXPOSE 8080 6700 5600
+
+# 启动容器时执行gq-cqhttp
+CMD ./go-cqhttp
