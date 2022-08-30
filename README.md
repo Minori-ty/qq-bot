@@ -1,11 +1,9 @@
 # qq-bot
 这是我利用[go-cqhttp](https://github.com/Mrs4s/go-cqhttp)和[cq-picsearcher-bot](https://github.com/Tsuk1ko/cq-picsearcher-bot)搭建的docker镜像，目的是为了更加快速搭建qq机器人。
 ## 步骤
-- 修改config.jsonc中的admin，saucenaoApiKey，机器人名称。
+- 修改config.jsonc中的admin qq号，saucenaoApiKey，机器人名称。
 - 添加config.yml中的qq号和密码
-- 输入命令行，docker build -t qq-bot . （后面有一点的，别漏了）
-- 输入命令行，docker-compose up
-- 如果需要扫二维码，并且没有出现二维码，则重新重复以上步骤，并且在生成镜像的时候立马开新的终端，输入docker attach qq-bot，进行扫码
+- 输入命令行，docker-compose up -d --build
 ***
 看了文档还是看不懂？
 我在b站录制了视频辅助大家部署搭建——[B站视频](https://www.bilibili.com/video/BV1cf4y1N7Ki)
