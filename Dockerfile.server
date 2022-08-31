@@ -1,4 +1,4 @@
-FROM centos
+FROM alpine
 
 WORKDIR /WWW/WWWROOT/
 

@@ -6,6 +6,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile.bot
+        image: cq-picsearcher-bot
         container_name: cq-picsearcher-bot
         restart: always
         depends_on:
@@ -15,6 +16,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile.server
+        image: go-cqhttp
         container_name: go-cqhttp
         restart: always
         ports:

@@ -5,7 +5,7 @@ WORKDIR /WWW/WWWROOT/
 # 下载插件
 RUN git clone https://github.com/Tsuk1ko/cq-picsearcher-bot.git
 
-FROM node
+FROM node:16-alpine
 
 # 拷贝文件到node镜像中
 COPY --from=builder WWW/WWWROOT/cq-picsearcher-bot/ /WWW/WWWROOT/
